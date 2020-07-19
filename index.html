@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ZNScopy</title>
+
+     <!-- Иконка  -->
+    <link rel="icon" href="img/ico/contact_book_contacts_notebook_icon_124667.ico" type="image/x-icon">
+
+    <style>
+      body {
+      background-image: url(img/ellipse.svg);
+      background-repeat: no-repeat;
+      overflow: hidden;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+     <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+   <!-- Page 1 -->
+  <!-- Menu -->
+  <nav>
+  <div class="container">
+     <div class="row pt-4">
+      <div class="col-md-2">
+        <img src="img/zns.svg" class="logoZns" alt="ZNS">
+        </div>
+      <div class="col-md-5"></div>
+      <div class="col-md-1 menuList">Product</div>
+      <div class="col-md-1 menuList">Pricing</div>
+      <div class="col-md-1 menuList">Contact</div>
+      <div class="col-md-1 menuList">
+        <span id="signInButton" class="sign">Sign in</span>
+        </div>
+      <div class="col-md-1">
+        <form>
+         <button id="signUpListButton" class="mainButton">Sign up</button>
+        </form>
+        </div>
+     </div>
+  </div>
+  </nav>
+
+  <div class="container">
+  <div class="row pt-5">
+     <div class="col-md-5">
+       <img src="img/networker.svg" class="networker">
+     </div>
+     <div class="col-md-2"></div>
+     <div class="col-md-5">
+       <p class="facedProblem">Faced with the problem of organizing contacts?</p>
+       <p class="downAppl">Sign up and download an application that will help you organize all your contacts in one place and increase the efficiency of your business or grow up the career ladder</p>
+     </div>
+  </div>
+  </div>
+
+  <div class="container">
+   <div class="row">
+     <div class="col-md-7"></div>
+     <div class="col-md-2">
+      <form>
+         <button id="signUpButton" class="mainButton signButton">Sign up</button>
+        </form>
+     </div>
+     <div class="col-md-3">
+       <form>
+         <input type="image" src="img/googleplay.png" alt="Get it on Google Play" class="googlePlayButton" id="googlePlayButton"/>
+        </form>
+     </div>
+   </div> 
+  </div>  
+
+  <!-- Page 2  -->
+ <!-- Sing up -->
+ 
+ <div id="signUpCont" class="signCont signUpCont">
+   <div id="closeSignUpCont" class="close"></div></br>
+   <p><img src="img/zns.svg" class="logoZns logoInCont" alt="ZNS"></p>
+   <p class="welcomeText">Welcome to ZNS!</p>
+   <p  class="cmsText">Contact management system</p>
+   <p class="welcomeText signText">Sign up</p>
+   <form id="signup-form">
+    <input type="text" placeholder="Sign up with Facebook" class="socialNetForm facebookForm" id="facebookSignUp" onClick="facebookSignIn()"/><br/>
+    <input type="text" placeholder="Sign up with Google" class="socialNetForm googleForm" onClick="googleSignIn()"/><br/>
+    <input type="text" placeholder="Sign up with Vk" class="socialNetForm vkForm"/>
+    <p class="or">or</p>
+    <input type="text" placeholder="Enter email or telephone" class="enterTelForm" id="signup-email" required /><br/>
+
+    <div id="errRegEmailCont">
+      <p class="textErrRegEmail">The entered email address is registered.</p>
+      <p class="regEmailSignIn" ><span id="regEmailSignIn">Sign in</span></p>
+    </div>
+
+    <input type="password" placeholder="Create password 6 + characters" class="enterTelForm createPassForm"  id="signup-password" required /><br/>
+    <input type="submit" value="Sign up"  class="mainButton confirmSignUp" id="signUpButton"/><br/>
+    <p>Already have an account? <span id="signInInCont" class="sign"> Sign in </span></p>
+    </form>
+ </div>
+
+ <!-- Page 3  -->
+ <!-- Sign in -->
+
+<div id="signInCont" class="signCont signInCont">
+   <div id="closeSignInCont" class="close"></div></br>
+   <p><img src="img/zns.svg" class="logoZns logoInCont" alt="ZNS"></p>
+   <p class="welcomeText">Welcome to ZNS!</p>
+   <p  class="cmsText">Contact management system</p>
+   <p class="welcomeText signText" >Sign in</p>
+   <form id="login-form">
+    <input type="text" placeholder="Sign in with Facebook" class="socialNetForm facebookForm"/><br/>
+
+    <input type="text" placeholder="Sign in with Google" class="socialNetForm googleForm" onClick="googleSignIn()"/><br/>
+   
+
+    <input type="text" placeholder="Sign in with Vk" class="socialNetForm vkForm"/>
+    <p class="or">or</p>
+    <input type="text" placeholder="Enter email or telephone" class="enterTelForm" id="login-email" required /><br/>
+    <input type="password" placeholder="Enter password" class="enterTelForm createPassForm" id="login-password" required /><br/>
+    <p id="forgotPassword" class="forgotPassword">Forgot your password?</p> 
+    <input type="submit" value="Sign in"  class="mainButton confirmSignUp" id="mainButton"/><br/>
+    <p>no an account? <span class="sign" id="signUpInCont"> Sign up </span></p>
+    </form>
+ </div>
+ 
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+
+ <script>
+
+        // Конфигурация
+        var firebaseConfig = {
+            apiKey: "AIzaSyCvOsmnVDeHnOGZd-tbLnQJBNDq77OsaPA",
+            authDomain: "zrmdb-cc0bf.firebaseapp.com",
+            databaseURL: "https://zrmdb-cc0bf.firebaseio.com",
+            projectId: "zrmdb-cc0bf",
+            storageBucket: "zrmdb-cc0bf.appspot.com",
+            messagingSenderId: "77119120413",
+            appId: "1:77119120413:web:c9e595e7b82bf969a0d2f4",
+            measurementId: "G-0CY9P2RRMR"
+        };
+
+        // Инициализация Firebase
+        firebase.initializeApp(firebaseConfig);
+    
+        // auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    
+    </script>
+
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
